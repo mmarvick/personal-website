@@ -1,6 +1,8 @@
 PersonalSite::Application.routes.draw do
   root  'static_pages#home'
   match '/contact',     to: 'static_pages#contact',     via: 'get'
+  match '/developer',   to: 'projects#index',          via: 'get'
+  resources :projects
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
