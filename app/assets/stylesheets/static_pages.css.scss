@@ -17,6 +17,8 @@ body {
 	list-style-type: none;
 }
 
+
+
 .project {
 	overflow: hidden;
 	list-style-type: none;
@@ -26,16 +28,23 @@ body {
 	.project-body {
 		width: auto;
 	}
+
+	a, a:visited, a:active {
+		.project-thumb {
+			color: #000;
+		}
+	}
+
 	.project-thumb {
 		float: left;
 		margin-right: 20px;
-		border-style: solid;
-		border-width: 2px;	
 		width: 144px;
 		height: 90px;
 		img {
+			border-style: solid;
+			border-width: 2px;	
 			max-width: 100%;
-			overflow: hidden;
+			//overflow: hidden;
 		}
 	}
 }
