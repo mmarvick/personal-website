@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-  	@project = Project.new(user_params)
+  	@project = Project.new(project_params)
   	if @project.save
   		flash[:success] = "Project saved!"
   		redirect_to :new
@@ -16,5 +16,10 @@ class ProjectsController < ApplicationController
   		render 'new'
   	end
   end
+
+  private
+    def project_params
+      params.permit(:url, :image_url, :description, :platform)
+    end
 
 end
