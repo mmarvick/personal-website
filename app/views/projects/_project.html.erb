@@ -1,12 +1,24 @@
 	<li >
 		<ul class="project well">
+			<% unless project.url.blank?%>
+			<a href=<%=project.url%>>
+			<% end %>
 			<li class="project-thumb">
 				<img src= <%= project.image_url %> alt= <%= project.title %> >
-			</li>	
+			</li>
+			<% unless project.url.blank?%>
+			</a>
+			<% end %>	
 			<span class="project-body">
 				<li class="project-title">
-					<%= project.title %>
-				</li>
+					<% unless project.url.blank?%>
+					<a href=<%=project.url%>>
+					<% end %>	
+					<%= project.title %>		
+					<% unless project.url.blank?%>
+					</a>
+					<% end %>
+				</li>	
 				<li class="project-descrip">
 					<%= project.description %>
 				</li>
