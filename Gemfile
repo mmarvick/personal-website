@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'
+gem "bcrypt-ruby", :require => "bcrypt"
 
 group :development, :test do
 	gem 'sqlite3'

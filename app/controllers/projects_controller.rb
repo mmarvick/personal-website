@@ -1,6 +1,10 @@
 class ProjectsController < ApplicationController
   def new
-  	@project = Project.new
+    if current_user
+  	 @project = Project.new
+    else
+      redirect_to :root, :notice => "You need to be logged in as an admin to do that!"
+    end
   end
 
   def index
