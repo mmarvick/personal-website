@@ -1,10 +1,8 @@
 class ProjectsController < ApplicationController
+  before_action :signed_in_user, only: [:new, :create, :edit, :update, :destroy]
+
   def new
-    if current_user
   	 @project = Project.new
-    else
-      redirect_to :root, :notice => "You need to be logged in as an admin to do that!"
-    end
   end
 
   def index
@@ -21,9 +19,35 @@ class ProjectsController < ApplicationController
   	end
   end
 
+  def edit
+    @project = Project.find(params[:id])
+  end
+
+  def update
+    @project = Project.find(params[:id])
+    if @project.update_attributes(project_params)
+      redirect_to :projects, :notice => "Successful update!"
+    else
+      redirect_to :projects, :notice => "Edit failed"
+    end
+  end
+
+  def destroy
+    @project = Project.find(params[:id])
+    if @project.delete
+      redirect_to :projects, :notice => "Deleted succesfully!"
+    else
+      redirect_to :projects, :notice => "Delete failed"
+    end
+  end
+
   private
     def project_params
       params.permit(:url, :image_url, :description, :platform)
+    end
+
+    def signed_in_user
+      redirect_to :root, :notice => "You need to be logged in as an admin to do that!" unless current_user
     end
 
 end
