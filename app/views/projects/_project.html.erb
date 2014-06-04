@@ -22,6 +22,12 @@
 				<li class="project-descrip">
 					<%= project.description %>
 				</li>
+
+				<% unless project.source.empty? %>
+				<li class="project-source">
+					<a href=<%=project.source%>>View Source</a>
+				</li>
+				<% end %>
 			</span>
 		</ul>
 
