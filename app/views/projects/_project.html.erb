@@ -25,7 +25,9 @@
 			</span>
 		</ul>
 
-		<%= button_to "edit", edit_project_path(project), :method=> :get %>
-		<%= button_to "delete", project, :method=> :delete %>
+		<% if current_user %>
+			<%= button_to "edit", edit_project_path(project), :method=> :get %>
+			<%= button_to "delete", project, :method=> :delete %>
+		<% end %>
 
 	</li>
