@@ -23,7 +23,7 @@
 					<%= project.description %>
 				</li>
 
-				<% unless project.source.empty? %>
+				<% unless project.source == nil or project.source.empty? %>
 				<li class="project-source">
 					<a href=<%=project.source%>>View Source</a>
 				</li>
