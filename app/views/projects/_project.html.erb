@@ -4,7 +4,11 @@
 			<a href=<%=project.url%>>
 			<% end %>
 			<li class="project-thumb">
-				<img src= <%= project.image_url %> alt= <%= project.title %> >
+				<% if project.image_url.include?('asset:') %>
+					<img alt="GitHub" src="<%= image_path(project.image_url['asset:'.length .. project.image_url.length])%>" />
+				<% else %>
+					<img src= <%= project.image_url %> alt= <%= project.title %> >
+				<% end %>
 			</li>
 			<% unless project.url.blank?%>
 			</a>
