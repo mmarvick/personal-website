@@ -28,10 +28,12 @@
 				</li>
 				<% unless project.source == nil or project.source.empty? %>
 					<li class="project-source">
-						<a href=<%=project.source%>>
+						<a href=<%=project.source%> class="link-image">
 						<img alt="GitHub" src="<%= image_path("GitHub-Mark-32px.png")%>" />
-						View Source
 						</a>
+						<a href=<%=project.source%>>
+						View Source
+						</a>						
 					</li>
 				<% end %>
 			</span>
