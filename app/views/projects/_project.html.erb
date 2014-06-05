@@ -26,17 +26,19 @@
 				<li class="project-descrip">
 					<%= project.description %>
 				</li>
+				<% unless project.source == nil or project.source.empty? %>
+					<li class="project-source">
+						<a href=<%=project.source%>>
+						<img alt="GitHub" src="<%= image_path("GitHub-Mark-32px.png")%>" />
+						View Source
+						</a>
+					</li>
+				<% end %>
 			</span>
 
-			<% unless project.source == nil or project.source.empty? %>
-			<li class="project-source">
-				<a href=<%=project.source%>>
-					<img alt="GitHub" src="<%= image_path("GitHub-Mark-32px.png")%>" />
-					View Source
-					
-				</a>
-			</li>
-			<% end %>
+			
+
+			
 
 		</ul>
 
