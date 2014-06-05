@@ -21,13 +21,16 @@ body {
 
 .project {
 	overflow: hidden;
+	position: relative;
 	list-style-type: none;
+	padding: 10px 10px 10px 164px;
 
 	.project-title {
 		font-weight: bold;
 	}
 	.project-body {
 		width: auto;
+		
 	}
 
 	a, a:visited, a:active {
@@ -37,8 +40,9 @@ body {
 	}
 
 	.project-thumb {
-		float: left;
-		margin-right: 20px;
+		position: absolute;
+		left: 10px;
+		// float: left;
 		width: 144px;
 		height: 90px;
 		img {
