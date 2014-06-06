@@ -1,42 +1,47 @@
 	<li >
 		<ul class="project well">
 			<% unless project.url.blank?%>
-			<a href=<%=project.url%>>
+			
 			<% end %>
 			<li class="project-thumb">
-				<% if project.image_url.include?('asset:') %>
-					<img alt="GitHub" src="<%= image_path(project.image_url['asset:'.length .. project.image_url.length])%>" />
-				<% else %>
-					<img src= <%= project.image_url %> alt= <%= project.title %> >
-				<% end %>
-			</li>
-			<% unless project.url.blank?%>
-			</a>
-			<% end %>	
-			<span class="project-body">
-				<li class="project-title">
-					<% unless project.url.blank?%>
-					<a href=<%=project.url%>>
-					<% end %>	
-					<%= project.title %>		
-					<% unless project.url.blank?%>
-					</a>
+				<a href=<%=project.url%>>
+					<% if project.image_url.include?('asset:') %>
+						<img alt="GitHub" src="<%= image_path(project.image_url['asset:'.length .. project.image_url.length])%>" />
+					<% else %>
+						<img src= <%= project.image_url %> alt= <%= project.title %> >
 					<% end %>
-				</li>	
-				<li class="project-descrip">
-					<%= project.description %>
-				</li>
-				<% unless project.source == nil or project.source.empty? %>
-					<li class="project-source">
-						<a href=<%=project.source%> class="link-image">
-						<img alt="GitHub" src="<%= image_path("GitHub-Mark-32px.png")%>" />
+				</a>
+			</li>
+
+			<% unless project.url.blank?%>
+			
+			<% end %>	
+			<li class="project-body">
+				<ul class = "project-body-list">
+					<li class="project-title">
+						<% unless project.url.blank?%>
+						<a href="<%=project.url%>">
+						<% end %>	
+						<%= project.title %>		
+						<% unless project.url.blank?%>
 						</a>
-						<a href=<%=project.source%>>
-						View Source
-						</a>						
+						<% end %>
+					</li>	
+					<li class="project-descrip">
+						<%= project.description %>
 					</li>
-				<% end %>
-			</span>
+					<% unless project.source == nil or project.source.empty? %>
+						<li class="project-source">
+							<a href=<%=project.source%> class="link-image">
+							<img alt="GitHub" src="<%= image_path("GitHub-Mark-32px.png")%>" />
+							</a>
+							<a href=<%=project.source%>>
+							View Source
+							</a>						
+						</li>
+					<% end %>
+				</ul>
+			</li>
 
 			
 
