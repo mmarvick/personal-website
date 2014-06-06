@@ -4,7 +4,7 @@
 
 
 	<div class = "uc well">		
-		<div class = "row">
+		<div class = "uc row project-show">
 			<div class = "uc col-sm-4">
 				<script src="//neon.galleriadisplay.com/466c811b1ed664a77f04664421192643c2dd68f1/init.js"></script>
 				<script>
@@ -16,18 +16,104 @@
 				</script>
 			</div>
 
-			<div class = "uc col-sm-8">
-				<p>
-					Urgent Call gives users peace of mind by allowing them to silence their phone and still receive alerts when they're needed most. Alerts can be triggered by:
-				</p>
-				<ul>
-					<li>Text messages contaning a customizable key word</li>
-					<li>Multiple repeat calls in succession</li>
-					<li>A single call from a preselected important caller</li>
-				</ul>
-				<p>
+			<div class = "uc col-sm-8 project-info">
+				<div class = "project-descrip">
+					<h3>
+						Urgent Call gives users peace of mind, allowing them to silence their phone and still receive alerts when they're needed most.
+					</h3>
+					<p>
+						Alerts are triggerable:
+					</p>
+					<ul>
 
-				</p>
+						<li>Text messages contaning a customizable key word</li>
+						<li>Multiple repeat calls in succession</li>
+						<li>A single call from a preselected important caller</li>
+
+					</ul>
+					<p>
+						Primary learnings from this project include:
+					</p>
+					<ul>
+
+						<li>Careful evaluation of tradeoffs between form and function to keep the interface clean and simple, yet filled with customizability appropriate to satisfy most users</li>
+						<li>Continuous design reviews to make the interface simpler and more intuitive based on observation and feedback from users, and study of the Android Design documentation</li>
+						<li>Storing preferences in lists and databases as appropriate, and storing in a way that is accessible and portable as features are added</li>					
+						<li>Continuous and frequent code refactorization to keep the codebase managable and maintainable</li>	
+					</ul>
+
+					<p>
+						Keeping a clean and simple interface was a critical concern for this project, especially since most users will probably rarely change the settings after the first time. Screenshots and links to package files for older iterations are included below.
+					</p>
+				</div>
+
+				<ul class="uc downloads simplelist">
+
+					<li>
+						<a href="https://play.google.com/store/apps/details?id=com.mmarvick.urgentcall_lite">
+							View on play store
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/mmarvick/phone-alert-app">
+							View source code
+						</a>
+					</li>
+					<li>
+						<a href="https://github.com/mmarvick/phone-alert-app/raw/master/other/apk/04_UrgentCallPro_26f93644c88b6632b7d4639d164bd7ef5971d220.apk">
+						Download package file
+						</a>
+					</li>
+
+				</ul>
 			</div>
+		</div>
+	</div>
+
+
+<div class = "uc well">		
+		<div class = "uc row project-old">
+			<% @commits = [
+        		{
+        			source_url: 'https://github.com/mmarvick/phone-alert-app/tree/a58d241a0c086739d2034d997102f086ce0fe6e2',
+        			apk_url: 'https://github.com/mmarvick/phone-alert-app/raw/master/other/apk/01_UrgentCall_a58d241a0c086739d2034d997102f086ce0fe6e2.apk',
+        			galleria_number: '8e3453e1633befd5dad9e660feaba546e890f258'
+        			},
+        		
+        		{
+        			source_url: 'https://github.com/mmarvick/phone-alert-app/tree/c892466d25671680ca882495df7642582f5fd00e',
+        			apk_url:  'https://github.com/mmarvick/phone-alert-app/raw/master/other/apk/02_UrgentCallPro_c892466d25671680ca882495df7642582f5fd00e.apk',
+        			galleria_number: '8a82e84dbb38036e0dd856022bfdea2b30e8fc5b'
+        			},
+
+        		{
+        			source_url: 'https://github.com/mmarvick/phone-alert-app/tree/000957cf23c8e2a643cc5cf4160c32e31358513a',
+        			apk_url: 'https://github.com/mmarvick/phone-alert-app/raw/master/other/apk/03_UrgentCallPro_000957cf23c8e2a643cc5cf4160c32e31358513a.apk',
+        			galleria_number: '89c3deac7272f5c8bb327c0aa438361102a9b89f'
+        		}
+				] %>
+
+			<% @commits.each do |commit| %>
+
+				<div class = "uc col-sm-<%= 12 / @commits.length %> old-project-show">
+					<script src="//neon.galleriadisplay.com/<%= commit[:galleria_number] %>/init.js"></script>
+					<ul class="simplelist">
+
+						<li>
+							<a href="<%= commit[:source_url] %>">
+								View source code
+							</a>
+						</li>
+						<li>
+							<a href="<%= commit[:apk_url] %>">
+							Download package file
+							</a>
+						</li>
+
+				</ul>
+				</div>
+			
+			<% end %>	
+							
 		</div>
 	</div>

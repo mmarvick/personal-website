@@ -26,10 +26,39 @@ link-image:active {
 }
 
 .uc {
-	.col-sm-4 {
-		//min-height:700px;
+
+	.project-show {
+		position: relative;
+		min-height: 600px;
 	}
+
+	.project-info {
+		position: static;
+	}
+
+	.project-descrip {
+		padding-bottom: 100px;
+	}
+	
+	.downloads {
+		position: absolute;
+		bottom: 0;
+	}
+
+	.simplelist {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;	
+	}
+
+	.old-project-show {
+		min-height: 600px;
+	}
+
 }
+
+
+
 
 .project {
 	overflow: hidden;
@@ -71,5 +100,6 @@ link-image:active {
 
 	.project-source {
 		margin-top: 20px;
+
 	} 
 }
