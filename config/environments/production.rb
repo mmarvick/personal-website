@@ -26,6 +26,8 @@ PersonalSite::Application.configure do
    config.assets.js_compressor = :uglifier
 #  config.assets.css_compressor = :sass
 
+   # THIS IS NOT GOOD! I NEED TO FIGURE OUT A WAY TO MAKE GALERIA WORK WITHOUT CHANGING config.assets.compile SETTING
+
   # Do not fallback to assets pipeline if a precompiled asset is missed.
 #  config.assets.compile = false
 
