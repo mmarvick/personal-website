@@ -27,6 +27,16 @@ link-image:active {
 
 .uc {
 
+	.well {
+		padding-top: 0px;
+	}
+
+	.section-title {
+		text-align: center;
+		font-size: 36px;
+		padding-bottom: 20px;
+	}
+
 	.project-show {
 		position: relative;
 		min-height: 600px;
@@ -54,6 +64,13 @@ link-image:active {
 	.old-project-show {
 		min-height: 600px;
 	}
+
+	.old-project-title {
+		text-align: center;
+		font-weight: bold;
+	}
+
+
 
 }
 
