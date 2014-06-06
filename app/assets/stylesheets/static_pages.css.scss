@@ -86,43 +86,53 @@ link-image:active {
 	padding: 10px 10px 10px 164px;
 	min-height: 110px;
 
-	.project-title {
-		font-weight: bold;
-	}
-	.project-body {
-		width: auto;
-		
-	}
 
-	.project-body-list {
-		list-style-type: none;
-	}
 
-	a, a:visited, a:active {
-		.project-thumb {
-			color: #000;
-		}
-	}
 
+}
+
+.project-body-list {
+	list-style-type: none;
+	padding: 0;
+}
+
+a, a:visited, a:active {
 	.project-thumb {
-		position: absolute;
-		left: 10px;
-		// float: left;
-		width: 144px;
-		height: 90px;
-		img {
-			//border-style: solid;
-			//border-width: 2px;	
-			max-width: 100%;
-			//overflow: hidden;
-			display: block;
-		    margin-left: auto;
-		    margin-right: auto;
-		}
+		color: #000;
 	}
+}
 
-	.project-source {
-		margin-top: 20px;
 
-	} 
+
+.project-source {
+	margin-top: 20px;
+
+} 
+
+.project-thumb {
+	//position: absolute;
+	//left: 10px;
+
+	float: left;
+	width: 144px;
+	height: 90px;
+	margin-right: 10px;
+
+}
+
+.project-thumb-img {	
+	max-width: 100%;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-title {
+	font-weight: bold;
+}
+.project-body {
+	//position: absolute;
+	//left: 164px;
+	width: auto;
+	
 }

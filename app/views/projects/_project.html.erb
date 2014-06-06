@@ -3,20 +3,20 @@
 			<% unless project.url.blank?%>
 			
 			<% end %>
-			<li class="project-thumb">
+			<span class="project-thumb">
 				<a href="<%=project.url%>">
 					<% if project.image_url.include?('asset:') %>
-						<img alt="GitHub" src="<%= image_path(project.image_url['asset:'.length .. project.image_url.length])%>" />
+						<img alt="<%= project.title %>" src="<%= image_path(project.image_url['asset:'.length .. project.image_url.length])%>" class = "project-thumb-img" />
 					<% else %>
-						<img src= "<%= project.image_url %>" alt= "<%= project.title %>" >
+						<img src= "<%= project.image_url %>" alt= "<%= project.title %>" class = "project-thumb-img" >
 					<% end %>
 				</a>
-			</li>
+			</span>
 
 			<% unless project.url.blank?%>
 			
 			<% end %>	
-			<li class="project-body">
+			<span class="project-body">
 				<ul class = "project-body-list">
 					<li class="project-title">
 						<% unless project.url.blank?%>
@@ -41,7 +41,7 @@
 						</li>
 					<% end %>
 				</ul>
-			</li>
+			</span>
 
 			
 
