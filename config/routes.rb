@@ -1,5 +1,6 @@
 PersonalSite::Application.routes.draw do
-  root  'static_pages#home'
+  #root  'static_pages#home'
+  root 'projects#index'
   match '/contact',     to: 'static_pages#contact',     via: 'get'
   match '/developer',   to: 'projects#index',          via: 'get'
   match '/developer/urgent_call', to: 'static_pages#project_urgent_call', via: 'get'
