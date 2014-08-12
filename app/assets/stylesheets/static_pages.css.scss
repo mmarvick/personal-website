@@ -1,7 +1,4 @@
-body {
-  padding-left: 1%;
-  padding-right: 1%;
-}
+
 .starter-template {
 	padding-top: 20px;
  	text-align: center;
@@ -115,63 +112,3 @@ link-image:active {
 #galleria1{height:600px;}
 #galleria2{height:600px;}
 #galleria3{height:600px;}
-
-.project {
-	overflow: hidden;
-	position: relative;
-	list-style-type: none;
-	padding: 10px 10px 10px 164px;
-	min-height: 110px;
-
-
-
-
-}
-
-.project-body-list {
-	list-style-type: none;
-	padding: 0;
-}
-
-a, a:visited, a:active {
-	.project-thumb {
-		color: #000;
-	}
-}
-
-
-
-.project-source {
-	float:right;
-	margin-right: 20px;
-	margin-top: 20px;
-
-} 
-
-.project-thumb {
-	//position: absolute;
-	//left: 10px;
-
-	float: left;
-	width: 144px;
-	height: 90px;
-	margin-right: 10px;
-
-}
-
-.project-thumb-img {	
-	max-width: 100%;
-	display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.project-title {
-	font-weight: bold;
-}
-.project-body {
-	//position: absolute;
-	//left: 164px;
-	width: auto;
-	
-}

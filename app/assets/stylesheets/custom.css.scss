@@ -28,7 +28,14 @@ input, textarea, select, .uneditable-input {
   @extend .error;
 }
 
+#wrapper {
+  margin: 0 5%;
+}
 
+
+/******************************
+ HEADER
+******************************/
 
 header {
   float: left;
@@ -70,4 +77,66 @@ nav a, nav a:visited {
 nav a.selected, nav a:hover {
   text-decoration: none;
   color: #78C0A8;
+}
+
+.platform h3 {
+  text-align: center;
+}
+
+
+
+/******************************
+ PROJECTS
+******************************/
+
+.projects {
+  padding: 0;
+}
+
+.project {
+  overflow: hidden;
+  position: relative;
+  list-style-type: none;
+  min-height: 110px;
+}
+
+.project-body-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+a, a:visited, a:active {
+  .project-thumb {
+    color: #000;
+  }
+}
+
+.project-source {
+  float:right;
+  margin-right: 20px;
+  margin-top: 20px;
+
+} 
+
+.project-thumb {
+  float: left;
+  width: 144px;
+  height: 90px;
+  margin-right: 10px;
+
+}
+
+.project-thumb-img {  
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.project-title {
+  font-weight: bold;
+}
+
+.project-body {
+  width: auto;
 }
