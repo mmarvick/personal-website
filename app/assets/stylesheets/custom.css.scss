@@ -27,3 +27,47 @@ input, textarea, select, .uneditable-input {
   @extend .control-group;
   @extend .error;
 }
+
+
+
+header {
+  float: left;
+  margin: 0 0 30px 0;
+  padding: 5px 0 0 0;
+  width: 100%;  
+  background-color: #5E412F;
+  color: #FCEBB6;
+}
+
+#logo {
+  width: 100%;
+  text-align: center;
+  font-size: 3em;
+  text-decoration: none;
+  color: #FCEBB6;
+}
+
+nav {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+  padding: 0px 15px;
+}
+
+nav a, nav a:visited {
+  text-decoration: none;
+  color: #FCEBB6;
+}
+
+nav a.selected, nav a:hover {
+  text-decoration: none;
+  color: #78C0A8;
+}
