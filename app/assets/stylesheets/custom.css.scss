@@ -1,32 +1,6 @@
-
-
-@mixin box_sizing {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-/* forms */
-
-input, textarea, select, .uneditable-input {
-  	border: 1px solid #bbb;
-  	width: 100%;
-	margin-bottom: 15px;
-	@include box_sizing;
-}
-
-#error_explanation {
-  color: #f00;
-  ul {
-    list-style: none;
-    margin: 0 0 18px 0;
-  }
-}
-
-.field_with_errors {
-  @extend .control-group;
-  @extend .error;
-}
+/******************************
+ GENERAL
+******************************/
 
 #wrapper {
   margin: 0 5%;
@@ -80,6 +54,7 @@ nav a.selected, nav a:hover {
 }
 
 .platform h3 {
+  margin: 0 0 20px;
   text-align: center;
 }
 
@@ -139,4 +114,28 @@ a, a:visited, a:active {
 
 .project-body {
   width: auto;
+}
+
+
+/******************************
+ FORMS
+******************************/
+
+input, textarea, select, .uneditable-input {
+    border: 1px solid #bbb;
+    width: 100%;
+  margin-bottom: 15px;
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
 }
