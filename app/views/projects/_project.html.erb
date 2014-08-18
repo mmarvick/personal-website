@@ -1,40 +1,38 @@
-	<li class="project well">
-		<span class="project-thumb">
+	<li class="project cf">
+	<div class="project-logo">
+		<h4>
+			<% unless project.url.blank?%>
 			<a href="<%=project.url%>">
-				<% if project.image_url.include?('asset:') %>
-					<img alt="<%= project.title %>" src="<%= image_path(project.image_url['asset:'.length .. project.image_url.length])%>" class = "project-thumb-img" />
-				<% else %>
-					<img src= "<%= project.image_url %>" alt= "<%= project.title %>" class = "project-thumb-img" >
-				<% end %>
+			<% end %>	
+			<%= project.title %>		
+			<% unless project.url.blank?%>
 			</a>
-		</span>
+			<% end %>
+		</h4>	
 
-		<span class="project-body">
-			<ul class = "project-body-list">
-				<li class="project-title">
-					<% unless project.url.blank?%>
-					<a href="<%=project.url%>">
-					<% end %>	
-					<%= project.title %>		
-					<% unless project.url.blank?%>
-					</a>
-					<% end %>
-				</li>	
-				<li class="project-descrip">
-					<%= project.description %>
-				</li>
-				<% unless project.source == nil or project.source.empty? %>
-					<li class="project-source">
-						<a href=<%=project.source%> class="link-image">
-						<img alt="GitHub" src="<%= image_path("GitHub-Mark-32px.png")%>" />
-						</a>							
-						<a href="<%=project.source%>">
-						View Source
-						</a>								
-					</li>
-				<% end %>
-			</ul>
-		</span>
+		<a href="<%=project.url%>" class="project-thumb">
+			<% if project.image_url.include?('asset:') %>
+				<img alt="<%= project.title %>" src="<%= image_path(project.image_url['asset:'.length .. project.image_url.length])%>" class = "project-thumb-img" />
+			<% else %>
+				<img src= "<%= project.image_url %>" alt= "<%= project.title %>" class = "project-thumb-img" >
+			<% end %>
+		</a>
+
+	</div>
+
+		<p class="project-descrip">
+			<%= project.description %>
+		</p>
+
+		<% unless project.source.blank? %>
+			<div class="project-source-wrapper">
+			<p class="project-source">						
+				<a href="<%=project.source%>">
+				View Source
+				</a>								
+			</p>
+			</div>
+		<% end %>
 
 		<% if current_user %>
 			<%= button_to "edit", edit_project_path(project), :method=> :get %>
