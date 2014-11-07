@@ -8,40 +8,35 @@
 			<div class = "uc col-sm-4">
 				<div id="galleria">
 	                <img 
-	                    src="<%= image_path("uc-4-1.jpg")%>"
-	                    data-description="Quickly turn off all alerts or view the status of different alerts"
-	                    alt="Quickly turn off all alerts or view the status of different alerts"
+	                    src="<%= image_path("uc-5-1.png")%>"
+	                    data-description="Add, remove, and customize call alerts"
+	                    alt="Add, remove, and customize call alerts"
 	                >
 
 	                <img 
-	                    src="<%= image_path("uc-4-2.jpg")%>"
-	                    data-description="Customize each alert with different parameters, including who can trigger it"
-	                    alt="Customize each alert with different parameters, including who can trigger it"
+	                    src="<%= image_path("uc-5-2.png")%>"
+	                    data-description="Add, remove, and customize text alerts"
+	                    alt="Add, remove, and customize text alerts"
 	                >
 
 	                <img 
-	                    src="<%= image_path("uc-4-3.jpg")%>"
-	                    data-description="Select who can trigger each alert"
-	                    alt="Select who can trigger each alert"
+	                    src="<%= image_path("uc-5-3.png")%>"
+	                    data-description="Modify alerts as much as you need"
+	                    alt="Modify alerts as much as you need"
 	                >
 
 	                <img 
-	                    src="<%= image_path("uc-4-4.jpg")%>"
-	                    data-description="Add or remove users from allow and block lists for each alert"
-	                    alt="Add or remove users from allow and block lists for each alert"
+	                    src="<%= image_path("uc-5-4.png")%>"
+	                    data-description="Snooze Urgent Call for a while when you really can't be disturbed"
+	                    alt="Snooze Urgent Call for a while when you really can't be disturbed"
 	                >
 
 	                <img 
-	                    src="<%= image_path("uc-4-5.jpg")%>"
-	                    data-description="Description of the Single Call Alert when it's off"
-	                    alt="Description of the Single Call Alert when it's off"
+	                    src="<%= image_path("uc-5-5.png")%>"
+	                    data-description="Urgent Call home page"
+	                    alt="Urgent Call home page"
 	                >
 
-	                <img 
-	                    src="<%= image_path("uc-4-6.jpg")%>"
-	                    data-description="Snooze all alerts temporarily"
-	                    alt="Snooze all alerts temporarily"
-	                >
 		        </div>
 
 			</div>
@@ -50,7 +45,7 @@
 				<div class = "project-download-play">
 					<a href="https://play.google.com/store/apps/details?id=com.mmarvick.uc_lite">
 						<img 
-							src="<%= image_path(play_store_download.png)%>"
+							src="<%= image_path("play_store_download.png")%>"
 							alt="Download Urgent Call on Google Play"
 						>
 					</a>
@@ -102,6 +97,7 @@
 		</div>
 	</div>
 
+	<!--
 
 	<div class = "uc well">		
 		<p class = "uc section-title">
@@ -242,6 +238,7 @@
 		</div>
 	</div>
 
+	-->
 
 	<script>
 		Galleria.loadTheme('<%= javascript_path "galleria/themes/classic/galleria.classic.min.js" %>');
@@ -249,7 +246,7 @@
 			thumbnails: "numbers"
 		});
 		Galleria.run('#galleria');
-		Galleria.run('#galleria1');
-		Galleria.run('#galleria2');
-		Galleria.run('#galleria3');
+		// Galleria.run('#galleria1');
+		// Galleria.run('#galleria2');
+		// Galleria.run('#galleria3');
 	</script>
