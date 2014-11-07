@@ -7,6 +7,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
+gem 'bootstrap-sprockets'
 gem 'bootstrap-sass'
 gem "bcrypt-ruby", :require => "bcrypt"
 
