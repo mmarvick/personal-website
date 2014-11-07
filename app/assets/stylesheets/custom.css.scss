@@ -25,12 +25,14 @@ header {
   text-align: center;
   font-size: 3em;
   text-decoration: none;
+  font-family: 'Varela Round', sans-serif;
   color: #FCEBB6;
 }
 
 nav {
   text-align: center;
   font-size: 1.5em;
+  font-family: 'Varela Round', sans-serif;
 }
 
 nav ul {
@@ -59,7 +61,6 @@ nav a.selected, nav a:hover {
 }
 
 
-
 /******************************
  PROJECTS
 ******************************/
@@ -69,52 +70,85 @@ nav a.selected, nav a:hover {
 }
 
 .project {
-  overflow: hidden;
-  position: relative;
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
   list-style-type: none;
-  min-height: 110px;
+  padding: 10px 20px;
+  margin: 10px 0;
+  background-color: whitesmoke;
 }
 
-.project-body-list {
-  list-style-type: none;
-  padding: 0;
+.project h4 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: .5em;
+  a, a:visited, a:active {
+    text-decoration: none;
+  }
 }
 
-a, a:visited, a:active {
-  .project-thumb {
+.project-thumb {
+  width: 144px;
+  display: block;
+  margin: 10px auto;
+  a, a:visited, a:active {
     color: #000;
   }
 }
 
-.project-source {
-  float:right;
-  margin-right: 20px;
-  margin-top: 20px;
+.project-thumb-img {  
+  display: block;
+  max-width: 144px;
+  max-height: 90px; 
+  margin: 0 auto;
+}
 
+.project-source-wrapper {
+  text-align: center;
+}
+
+.project-source {
+  display: inline-block;
+  background-image: url(image-path("GitHub-Mark-32px.png"));
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  padding-left: 20px;
 } 
 
-.project-thumb {
-  float: left;
-  width: 144px;
-  height: 90px;
-  margin-right: 10px;
+@media only screen and (min-width: 768px)  {
+  .project-thumb {
+    float: left;
+    margin-right: 32px;
+  }
 
+  .project-source-wrapper {
+    float: left;
+  } 
+
+  .project-source {
+    clear: left;
+  }
 }
 
-.project-thumb-img {  
-  max-width: 100%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+/******************************
+CLEARFIX
+*******************************/
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
 }
 
-.project-title {
-  font-weight: bold;
+.cf:after {
+    clear: both;
 }
 
-.project-body {
-  width: auto;
+.cf {
+    *zoom: 1;
 }
+
 
 
 /******************************
