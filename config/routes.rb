@@ -1,7 +1,9 @@
 PersonalSite::Application.routes.draw do
   #root  'static_pages#home'
-  root 'projects#index'
+  root 'static_pages#contact'
+  match '/about',       to: 'static_pages#contact',     via: 'get'
   match '/contact',     to: 'static_pages#contact',     via: 'get'
+  match '/portfolio',   to: 'projects#index',          via: 'get'
   match '/developer',   to: 'projects#index',          via: 'get'
   match '/developer/urgent_call', to: 'static_pages#project_urgent_call', via: 'get'
   get "log_in"  => "sessions#new", :as => "log_in"
